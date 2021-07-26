@@ -42,7 +42,7 @@ class Index extends Component {
     console.log(systemUtils.getPhoneSys())
 
     // await indexStore.getTokenInfo()
-    
+
 
     // Taro.getSetting({
     //   success: (res) => {
@@ -171,8 +171,8 @@ class Index extends Component {
 
         <ItemView title={'preload'} style={{ backgroundColor: 'gray' }} onClick={() => this.toDetailsThird()} />
 
-        <ItemTxt title={'非Memo测试数据刷新渲染：' + count} />
-        <ItemTxtA title={'Memo测试数据刷新渲染：' + count} />
+        <ItemTxt title={'Memo测试数据刷新渲染：' + count} />
+        <ItemTxtA title={'非Memo测试数据刷新渲染：' + count} />
         <ItemView title={'点击修改数据'} onClick={() => this.toItemClick()} />
 
       </MainContainer>
