@@ -1,0 +1,17 @@
+@import '../../styles/mixins.scss';
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    // overflow-x: hidden;
+    position: fixed;
+
+
+    .pagecontent {
+        display: flex;
+        flex-direction: column;
+    }
+}

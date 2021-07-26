@@ -1,0 +1,50 @@
+@import '../../styles/mixins.scss';
+
+.navigationView {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+
+    .navigation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-left: 24px;
+        padding-right: 24px;
+        
+
+        .navItem {
+            width: 200px;
+            flex-shrink: 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .backIcon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 500;
+            text-align: center;
+            color: #fff;
+            line-height: 48px;
+            flex-grow: 1;
+
+            @include lamp-clamp(1);
+        }
+    }
+}

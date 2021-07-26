@@ -1,0 +1,55 @@
+.bottom_tab {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: white;
+    box-shadow: 0PX -5PX 10PX 0PX rgba(0, 0, 0, 0.03);
+    bottom: 0;
+
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img {
+            // margin: 5PX auto 0;
+            width: 28PX;
+            height: 28PX;
+        }
+
+        .text {
+            // height: 14PX;
+            line-height: 14PX;
+            font-size: 10PX;
+            font-family: PingFangSC-Light, PingFang SC;
+            font-weight: 300;
+            // color: rgba(68, 68, 68, 1);
+        }
+    }
+}
+
+.pView {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // background-color: green;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 10px;
+    margin-left: 25PX;
+}
+
+.pTxt {
+    position: absolute;
+    display: flex;
+    left: 22PX;
+    top: 10px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 5px 8px;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+}

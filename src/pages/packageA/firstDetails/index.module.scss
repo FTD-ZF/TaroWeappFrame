@@ -1,0 +1,24 @@
+.main {
+    flex-direction: row;
+    display: flex;
+    padding: 24px;
+    border-bottom: 1px solid #ccc ;
+}
+
+.leftV {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.rightV {
+    margin-left: 24px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+
+    .rightTitle {
+        font-size: 24px;
+        color: orange;
+    }
+}
