@@ -17,7 +17,8 @@ export default {
       'pages': [
         'firstDetails/index',
         'secondDetails/index',
-        'thirdDetails/index'
+        'thirdDetails/index',
+        'forthDetails/index',
       ]
     }
   ],

@@ -55,11 +55,18 @@ class Index extends Component {
         console.log('======onScrollToUpper====')
     }
 
+    toChangeItemTxt(item) {
+        console.log(item)
+        let position = item.index;
+        this.state.data[position].id = '该条数据已修改'
+        this.setState({ data: JSON.parse(JSON.stringify(this.state.data)) })
+    }
     Row = React.memo((item) => {
-        // console.log(item)
+        console.log('item渲染数====' + item.index)
         return (
-            <View style={{ backgroundColor: 'yellow', display: 'flex', height: '100%' }} >
-                第{item.index} 个
+            <View style={{ backgroundColor: 'yellow', display: 'flex', height: '100%' }}
+                onClick={() => this.toChangeItemTxt(item)} >
+                {'第' + item.index + '个 id为' + item.data[item.index].id}
             </View>
         );
     })
@@ -115,9 +122,9 @@ class Index extends Component {
                     itemSize={itemHeight} /* 列表单项的高度  */
                     onScroll={({ scrollDirection, scrollOffset }) => {
 
-                        console.log(scrollOffset)
+                        // console.log(scrollOffset)
                         // console.log('== ((dataLen - curCount) * itemHeight + 100)===' + ((dataLen - curCount) * itemHeight + 100))
-                        console.log('== (dataLen ) * itemHeight-vListHeight===' + ((dataLen * itemHeight) - vListHeight))
+                        // console.log('== (dataLen ) * itemHeight-vListHeight===' + ((dataLen * itemHeight) - vListHeight))
 
                         if (
                             // 避免重复加载数据

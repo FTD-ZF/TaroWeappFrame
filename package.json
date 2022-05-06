@@ -24,6 +24,7 @@
     "dev:h5": "npm run build:h5 -- --watch",
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
+    "dev:dd": "npm run build:dd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch"
   },
   "browserslist": [
@@ -36,6 +37,7 @@
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.2.0",
+    "@tarojs/plugin-platform-alipay-dd": "0.0.5",
     "@tarojs/react": "3.2.0",
     "@tarojs/runtime": "3.2.0",
     "@tarojs/taro": "3.2.0",

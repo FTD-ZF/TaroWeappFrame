@@ -1,7 +1,6 @@
 import { Component } from 'react'
 import {
-  View, Button, Text, RichText, ScrollView, WebView,
-  CoverView, CoverImage,
+  View, Button, Text,
 } from '@tarojs/components'
 import { observer, } from 'mobx-react'
 import Taro from '@tarojs/taro'
@@ -14,7 +13,7 @@ import indexStore from './store/indexStore'
 import MainContainer from '@/components/mainContainer'
 import { NoDoublePress } from '@/utils/NoDoublePress'
 import ItemView from './components/itemView/itemView'
-import ItemTxt from './components/itemTxt/itemTxt'
+import ItemTxtMemo from './components/itemTxt/itemTxt'
 import ItemTxtA from './components/itemTxtA/itemTxtA'
 @observer
 class Index extends Component {
@@ -140,10 +139,16 @@ class Index extends Component {
 
   toDetailsThird() {
     // Taro.preload(this.preloadData())
-    Taro.preload('dataA', '123')
+    Taro.preload({ key: 'value' })
     // Taro.preloadData('xsa');
     Taro.navigateTo({
       url: `/pages/packageA/thirdDetails/index`,
+    });
+  }
+
+  toDetailsForth(){
+    Taro.navigateTo({
+      url: `/pages/packageA/forthDetails/index`,
     });
   }
 
@@ -171,7 +176,9 @@ class Index extends Component {
 
         <ItemView title={'preload'} style={{ backgroundColor: 'gray' }} onClick={() => this.toDetailsThird()} />
 
-        <ItemTxt title={'Memo测试数据刷新渲染：' + count} />
+        <ItemView title={'Func_Component'} style={{ backgroundColor: 'gray' }} onClick={() => this.toDetailsForth()} />
+
+        <ItemTxtMemo title={'Memo测试数据刷新渲染：' + count} />
         <ItemTxtA title={'非Memo测试数据刷新渲染：' + count} />
         <ItemView title={'点击修改数据'} onClick={() => this.toItemClick()} />
 

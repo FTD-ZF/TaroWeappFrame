@@ -4,17 +4,18 @@ import {
 } from '@tarojs/components'
 import styles from './itemTxt.module.scss'
 
-function ItemTxt(props) {
-    console.log('I am rendering ItemTxt');
+
+const ItemTxtMemo = (props) => {
+    console.log('I am rendering ItemTxtMemo');
     const { title, style } = props;
     return (
-        <View className={styles.item} style={style}  >
+        <View className={styles.item} style={style}>
             {title}
         </View>
     )
 }
 
-function areEqual(prevProps, nextProps) {
+const areEqual = (prevProps, nextProps) => {
     /*
     如果把 nextProps 传入 render 方法的返回结果与
     将 prevProps 传入 render 方法的返回结果一致则返回 true，
@@ -22,4 +23,4 @@ function areEqual(prevProps, nextProps) {
     */
     return true
 }
-export default React.memo(ItemTxt)
+export default React.memo(ItemTxtMemo)

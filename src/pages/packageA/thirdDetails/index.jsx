@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image, Text, } from '@tarojs/components'
 import VirtualList from '@tarojs/components/virtual-list'
 import { observer, } from 'mobx-react'
-import Taro from '@tarojs/taro'
+import Taro, { getCurrentInstance } from '@tarojs/taro'
 
 import styles from './index.module.scss'
 
@@ -21,8 +21,9 @@ class Index extends Component {
 
     componentWillMount() {
         console.log('====third===componentWillMount=')
-        console.log(Taro.getCurrentInstance().preloadData)
-        
+        //目前没有数据，api问题
+        console.log(getCurrentInstance().preloadData)
+
         console.log('====third===componentWillMount=')
     }
 

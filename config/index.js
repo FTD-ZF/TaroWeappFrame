@@ -13,7 +13,8 @@ const config = {
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [
-    'taro-plugin-skeleton'
+    'taro-plugin-skeleton',
+    '@tarojs/plugin-platform-alipay-dd',
   ],
   defineConstants: {
   },

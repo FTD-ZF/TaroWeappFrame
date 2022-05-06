@@ -75,8 +75,8 @@ class Index extends Component {
                 onScrollToLower={() => this.onScrollToLower()}
                 onScrollToUpper={() => this.onScrollToUpper()}
                 isLoading={isLoadingA}>
-                {isLoadingA ? <Skeleton avatar avatarShape='square' avatarSize={100} title row={1} /> :
-                    <View>
+                {/* {isLoadingA ? <Skeleton avatar avatarShape='square' avatarSize={100} title row={1} /> : */}
+                    {/* <View> */}
                         {
                             testData.map((item, index) => {
                                 return <View className={styles.main} >
@@ -88,7 +88,7 @@ class Index extends Component {
                                 </View>
                             })
                         }
-                    </View>}
+                    {/* </View>} */}
 
             </MainContainer>
 

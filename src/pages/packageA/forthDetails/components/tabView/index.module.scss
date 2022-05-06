@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: transparent;
+    height: 80px;
+}
+
+.tab_v {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.line_default {
+    width: 44px;
+    height: 6px;
+    background-color: transparent;
+    margin-top: 18px;
+}
+
+
+.line_active {
+    width: 44px;
+    height: 6px;
+    background-color: #3296FA;
+    margin-top: 18px;
+}
+
+.txt_active {
+    font-size: 28px;
+    color: #191F25;
+    font-weight: 500;
+}
+
+.txt_default {
+    font-size: 28px;
+    color: #191F25;
+    opacity: 0.5;
+}
